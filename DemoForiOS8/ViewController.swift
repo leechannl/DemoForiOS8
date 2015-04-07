@@ -27,75 +27,18 @@ class ViewController: UIViewController {
         v2.setTranslatesAutoresizingMaskIntoConstraints(false)
         v3.setTranslatesAutoresizingMaskIntoConstraints(false)
 
-        v1.addConstraint(
-            NSLayoutConstraint(item: v2,
-                attribute: .Left,
-                relatedBy: .Equal,
-                toItem: v1,
-                attribute: .Left,
-                multiplier: 1,
-                constant: 0))
-        v1.addConstraint(
-            NSLayoutConstraint(item: v2,
-                attribute: .Right,
-                relatedBy: .Equal,
-                toItem: v1,
-                attribute: .Right,
-                multiplier: 1,
-                constant: 0))
-        v1.addConstraint(
-            NSLayoutConstraint(item: v2,
-                attribute: .Top,
-                relatedBy: .Equal,
-                toItem: v1,
-                attribute: .Top,
-                multiplier: 1,
-                constant: 0)
+        let d = ["v2": v2, "v3": v3];
+        v1.addConstraints(
+            NSLayoutConstraint.constraintsWithVisualFormat("H:|[v2]|", options: nil, metrics: nil, views: d)
         )
-        v2.addConstraint(
-            NSLayoutConstraint(item: v2,
-                attribute: .Height,
-                relatedBy: .Equal,
-                toItem: nil,
-                attribute: .NotAnAttribute,
-                multiplier: 1,
-                constant: 10)
+        v1.addConstraints(
+            NSLayoutConstraint.constraintsWithVisualFormat("V:|[v2(10)]", options: nil, metrics: nil, views: d)
         )
-        v3.addConstraint(
-            NSLayoutConstraint(item: v3,
-                attribute: .Width,
-                relatedBy: .Equal,
-                toItem: nil,
-                attribute: .NotAnAttribute,
-                multiplier: 1,
-                constant: 20)
+        v1.addConstraints(
+            NSLayoutConstraint.constraintsWithVisualFormat("H:[v3(20)]|", options: nil, metrics: nil, views: d)
         )
-        v3.addConstraint(
-            NSLayoutConstraint(item: v3,
-                attribute: .Height,
-                relatedBy: .Equal,
-                toItem: nil,
-                attribute: .NotAnAttribute,
-                multiplier: 1,
-                constant: 20)
-        )
-        v1.addConstraint(
-            NSLayoutConstraint(item: v3,
-                attribute: .Right,
-                relatedBy: .Equal,
-                toItem: v1,
-                attribute: .Right,
-                multiplier: 1,
-                constant: 0)
-        )
-        v1.addConstraint(
-            NSLayoutConstraint(item: v3,
-                attribute: .Bottom,
-                relatedBy: .Equal,
-                toItem: v1,
-                attribute: .Bottom,
-                multiplier: 1,
-                constant: 0)
+        v1.addConstraints(
+            NSLayoutConstraint.constraintsWithVisualFormat("V:[v3(20)]|", options: nil, metrics: nil, views: d)
         )
     }
 
