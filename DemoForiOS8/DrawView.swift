@@ -11,9 +11,10 @@ import UIKit
 class DrawView: UIView {
 
     override func drawRect(rect: CGRect) {
-        let p = UIBezierPath(ovalInRect: CGRectMake(0, 0, 100, 100))
-        UIColor.blueColor().setFill()
-        p.fill()
+        let context = UIGraphicsGetCurrentContext()
+        CGContextAddEllipseInRect(context, CGRectMake(0, 0, 100, 100))
+        CGContextSetFillColorWithColor(context, UIColor.blueColor().CGColor)
+        CGContextFillPath(context)
     }
 
 }
