@@ -66,6 +66,11 @@ class ViewController: UIViewController {
 
         let imageView = UIImageView(image: UIImage(named: "evernote_icon_black"))
         self.view.addSubview(imageView)
+
+        let drawView = DrawView()
+        drawView.frame = CGRectMake(100, 400, 100, 100)
+        drawView.backgroundColor = UIColor.clearColor()
+        self.view.addSubview(drawView)
     }
 
     func buttonPressed() {
