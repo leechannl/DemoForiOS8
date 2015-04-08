@@ -63,6 +63,9 @@ class ViewController: UIViewController {
         button.setTitleColor(UIColor.greenColor(), forState: .Normal)
         button.addTarget(self, action: "buttonPressed", forControlEvents: .TouchUpInside)
         self.view.addSubview(button)
+
+        let imageView = UIImageView(image: UIImage(named: "evernote_icon_black"))
+        self.view.addSubview(imageView)
     }
 
     func buttonPressed() {
