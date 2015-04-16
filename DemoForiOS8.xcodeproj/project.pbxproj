@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8D114D141ADD0D7D001B2DF6 /* DrawedLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D114D131ADD0D7D001B2DF6 /* DrawedLayer.swift */; };
 		8D2C22221ADFBD9D00B1AA46 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D2C22211ADFBD9D00B1AA46 /* main.storyboard */; };
+		8D2C22241ADFC14200B1AA46 /* BlurViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2C22231ADFC14200B1AA46 /* BlurViewController.swift */; };
 		8D7E02501AD286A100A0EFDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7E024F1AD286A100A0EFDB /* AppDelegate.swift */; };
 		8D7E02521AD286A100A0EFDB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7E02511AD286A100A0EFDB /* ViewController.swift */; };
 		8D7E02571AD286A100A0EFDB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D7E02561AD286A100A0EFDB /* Images.xcassets */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		8D114D131ADD0D7D001B2DF6 /* DrawedLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawedLayer.swift; sourceTree = "<group>"; };
 		8D2C22211ADFBD9D00B1AA46 /* main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
+		8D2C22231ADFC14200B1AA46 /* BlurViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurViewController.swift; sourceTree = "<group>"; };
 		8D7E024A1AD286A100A0EFDB /* DemoForiOS8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoForiOS8.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D7E024E1AD286A100A0EFDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D7E024F1AD286A100A0EFDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			children = (
 				8D7E024F1AD286A100A0EFDB /* AppDelegate.swift */,
 				8D2C22211ADFBD9D00B1AA46 /* main.storyboard */,
+				8D2C22231ADFC14200B1AA46 /* BlurViewController.swift */,
 				8D7E02511AD286A100A0EFDB /* ViewController.swift */,
 				8DF8D4371AD58672000C41B3 /* DrawView.swift */,
 				8D114D131ADD0D7D001B2DF6 /* DrawedLayer.swift */,
@@ -221,6 +224,7 @@
 				8D114D141ADD0D7D001B2DF6 /* DrawedLayer.swift in Sources */,
 				8D7E02521AD286A100A0EFDB /* ViewController.swift in Sources */,
 				8D7E02501AD286A100A0EFDB /* AppDelegate.swift in Sources */,
+				8D2C22241ADFC14200B1AA46 /* BlurViewController.swift in Sources */,
 				8DF8D4381AD58672000C41B3 /* DrawView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

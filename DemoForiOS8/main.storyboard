@@ -67,7 +67,7 @@
         <!--Blur and Vibrancy Views-->
         <scene sceneID="ZBv-a7-a1s">
             <objects>
-                <viewController id="52a-HG-N5k" sceneMemberID="viewController">
+                <viewController id="52a-HG-N5k" customClass="BlurViewController" customModule="DemoForiOS8" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qlu-kC-1fs"/>
                         <viewControllerLayoutGuide type="bottom" id="Dop-Fb-s0L"/>
@@ -75,7 +75,27 @@
                     <view key="view" contentMode="scaleToFill" id="C2z-eC-1Qf">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="62K-A5-uUb">
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="600"/>
+                                <color key="backgroundColor" red="0.40000000596046448" green="0.40000000596046448" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ROa-V8-gYs">
+                                <rect key="frame" x="300" y="300" width="300" height="300"/>
+                                <color key="backgroundColor" red="1" green="0.40000000596046448" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ROa-V8-gYs" firstAttribute="width" secondItem="62K-A5-uUb" secondAttribute="width" id="0Sh-AN-RHG"/>
+                            <constraint firstItem="ROa-V8-gYs" firstAttribute="top" secondItem="qlu-kC-1fs" secondAttribute="bottom" constant="236" id="1bW-DH-jg2"/>
+                            <constraint firstItem="62K-A5-uUb" firstAttribute="leading" secondItem="C2z-eC-1Qf" secondAttribute="leading" id="24V-wm-aoe"/>
+                            <constraint firstItem="Dop-Fb-s0L" firstAttribute="top" secondItem="ROa-V8-gYs" secondAttribute="bottom" id="Gd5-i5-1f1"/>
+                            <constraint firstItem="62K-A5-uUb" firstAttribute="top" secondItem="C2z-eC-1Qf" secondAttribute="top" id="LIk-Xq-6k0"/>
+                            <constraint firstItem="Dop-Fb-s0L" firstAttribute="top" secondItem="62K-A5-uUb" secondAttribute="bottom" id="Lrg-9V-16j"/>
+                            <constraint firstItem="ROa-V8-gYs" firstAttribute="leading" secondItem="62K-A5-uUb" secondAttribute="trailing" id="M4W-AX-d8x"/>
+                            <constraint firstAttribute="trailing" secondItem="ROa-V8-gYs" secondAttribute="trailing" id="qjR-HO-bNM"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Blur and Vibrancy Views" id="GaA-Su-eAQ"/>
                 </viewController>
