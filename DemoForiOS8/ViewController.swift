@@ -71,6 +71,28 @@ class ViewController: UIViewController {
         drawedView.frame = CGRectMake(100, 400, 100, 100)
         drawedView.backgroundColor = UIColor.clearColor()
         self.view.addSubview(drawedView)
+
+        let carfield = UIImage(named: "carfield")
+        let carfieldci = CIImage(image: carfield)
+        let carfieldExtent = carfieldci.extent()
+        let center = CIVector(x: carfieldExtent.width/2.0, y: carfieldExtent.height/2.0)
+        let smallerDimension = min(carfieldExtent.width, carfieldExtent.height)
+        let largerDimension = max(carfieldExtent.width, carfieldExtent.height)
+        let grad = CIFilter(name: "CIRadialGradient")
+        grad.setValue(center, forKey: "inputCenter")
+        grad.setValue(smallerDimension/2.0 * 0.85, forKey: "inputRadius0")
+        grad.setValue(largerDimension/2.0, forKey: "inputRadius1")
+        let gradImage = grad.outputImage
+        let blendImage = carfieldci.imageByApplyingFilter("CIBlendWithMask", withInputParameters: [
+            "inputMaskImage": gradImage
+            ])
+
+        let carfieldImageView = UIImageView()
+        carfieldImageView.frame = CGRectMake(100.0, 300.0, 100.0, 100.0)
+        self.view.addSubview(carfieldImageView)
+        let carfieldcg = CIContext(options: nil).createCGImage(blendImage, fromRect: carfieldExtent)
+        carfieldImageView.image = UIImage(CGImage: carfieldcg)
+
     }
 
     func buttonPressed() {
